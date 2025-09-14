@@ -1,0 +1,37 @@
+@use './variables' as *;
+@use 'sass:string';
+@use 'sass:color';
+
+.btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+
+  &-primary {
+    background: $primary;
+    color: #fff;
+
+    &:hover {
+      background: color.adjust($primary, $lightness: -5%);
+    }
+  }
+
+  &-disabled {
+    background: $border;
+    color: #aaa;
+    cursor: not-allowed;
+
+    
+  }
+
+  &-secondary {
+    background: $secondary;
+    color: #fff;
+
+    &:hover {
+      background: color.adjust($secondary, $lightness: -5%);
+    }
+  }
+}

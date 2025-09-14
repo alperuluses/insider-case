@@ -1,0 +1,136 @@
+@use 'sass:map';
+@use './variables' as *;
+
+@mixin up($bp) {
+  @media (min-width: map.get($breakpoints, $bp)) {
+    @content;
+  }
+}
+/* -----------------------------
+   TEXT ALIGN
+--------------------------------*/
+$aligns: (left, center, right, justify);
+@each $a in $aligns {
+  .text-#{$a} {
+    text-align: $a !important;
+  }
+  @each $bp, $min in $breakpoints {
+    @include up($bp) {
+      .text-#{$bp}-#{$a} {
+        text-align: $a !important;
+      }
+    }
+  }
+}
+
+/* -----------------------------
+   DISPLAY
+--------------------------------*/
+$display-values: (none, block, inline, inline-block, flex, grid);
+@each $v in $display-values {
+  .d-#{$v} {
+    display: $v !important;
+  }
+  @each $bp, $min in $breakpoints {
+    @include up($bp) {
+      .d-#{$bp}-#{$v} {
+        display: $v !important;
+      }
+    }
+  }
+}
+
+/* -----------------------------
+   FLEX helpers
+--------------------------------*/
+$directions: (row, row-reverse, column, column-reverse);
+@each $d in $directions {
+  .flex-#{$d} {
+    flex-direction: $d !important;
+  }
+}
+
+$wraps: (wrap, nowrap, wrap-reverse);
+@each $w in $wraps {
+  .flex-#{$w} {
+    flex-wrap: $w !important;
+  }
+}
+
+$justify: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+@each $k, $v in $justify {
+  .justify-#{$k} {
+    justify-content: $v !important;
+  }
+}
+
+$items: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
+);
+@each $k, $v in $items {
+  .items-#{$k} {
+    align-items: $v !important;
+  }
+}
+
+$content: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+  stretch: stretch,
+);
+@each $k, $v in $content {
+  .content-#{$k} {
+    align-content: $v !important;
+  }
+}
+
+/* -----------------------------
+   Sizing shortcuts
+--------------------------------*/
+.w-100 {
+  width: 100% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.max-w-full {
+  max-width: 100% !important;
+}
+
+.glow-1 {
+  /* gold */
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.75)) drop-shadow(0 0 14px rgba(255, 215, 0, 0.45));
+}
+.glow-2 {
+  /* silver */
+  filter: drop-shadow(0 0 6px rgba(192, 192, 192, 0.7))
+    drop-shadow(0 0 12px rgba(192, 192, 192, 0.4));
+}
+.glow-3 {
+  /* bronze */
+  filter: drop-shadow(0 0 6px rgba(205, 127, 50, 0.7)) drop-shadow(0 0 12px rgba(205, 127, 50, 0.4));
+}
+
+@keyframes glowPulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}

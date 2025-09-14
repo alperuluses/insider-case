@@ -1,0 +1,42 @@
+/* Box sizing ve margin/padding reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Varsayılan font ve satır yüksekliği */
+html, body {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Görsellerin responsive davranması */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elemanları */
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Linkler */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Listeler */
+ul, ol {
+  list-style: none;
+}
+

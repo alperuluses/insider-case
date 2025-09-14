@@ -1,0 +1,1 @@
+export type RacePhase = 'idle' | 'running' | 'paused' | 'waitingNext' | 'finished'

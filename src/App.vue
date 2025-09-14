@@ -1,30 +1,62 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import RaceHeader from './components/Header/RaceHeader.vue'
+import RaceTrack from './components/Race/RaceTrack.vue'
+import RaceHorseList from './components/Horse/RaceHorseList.vue'
+import RaceTableWrapper from './components/RaceTables/RaceTableWrapper.vue'
+import { ref } from 'vue'
+
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="app">
+    <!-- HEADER -->
+    <RaceHeader />
+
+    <main class="main">
+      <!-- HORSE LIST -->
+      <RaceHorseList />
+
+      <!-- RACE TRACK -->
+      <RaceTrack />
+
+      <!-- PROGRAM & RESULTS -->
+      <RaceTableWrapper />
+    </main>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style scoped lang="scss">
+@use "sass:string";
+@use "sass:color";
+@use './assets/styles/variables' as *;
+
+.app {
+  font-family: "Inter", sans-serif;
+  background: #251d44;
+  color: #2b2b2b;
+  padding: 1rem;
+  min-width: 100%;
+  height: 100vh;
+  color: white;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+// MAIN LAYOUT
+.main {
+  display: grid;
+  grid-template-columns: 350px 1fr 280px;
+  gap: 1rem;
+  height: 90%;
+
+
+  //mobilede overflow
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    height: 90%;
+    overflow: auto;
+  }
 }
 </style>
