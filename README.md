@@ -39,5 +39,6 @@ src/
 │  └─ Horse/          # at görselleri/numaralar(1-20 liste)
 ├─ core/              # model tanımları ve constantlar (Horse, Race...)
 ├─ stores/            # vuex modülleri (race, schedule, horses)
+├─ shared/            # reusable components
 └─ utils/             # yardımcılar (raceMath, generator)
 ```      
