@@ -26,7 +26,7 @@ npm run test     # veya: npx vitest
 npx playwright install
 npm run test:e2e # veya: npx playwright test
 
-# Proje Özel Yapısı
+# Proje Yapısı
 ```
 src/
 ├─ assets/
