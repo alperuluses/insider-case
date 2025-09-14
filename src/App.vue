@@ -3,9 +3,6 @@ import RaceHeader from './components/Header/RaceHeader.vue'
 import RaceTrack from './components/Race/RaceTrack.vue'
 import RaceHorseList from './components/Horse/RaceHorseList.vue'
 import RaceTableWrapper from './components/RaceTables/RaceTableWrapper.vue'
-import { ref } from 'vue'
-
-
 </script>
 
 <template>
