@@ -26,17 +26,18 @@ npm run test     # veya: npx vitest
 npx playwright install
 npm run test:e2e # veya: npx playwright test
 
-#Proje Özel Yapısı
-
+# Proje Özel Yapısı
+```
 src/
-  assets/
-    images/         # logo, ikonlar, madalyalar
-    styles/         # variables & utilities (SCSS)
-  components/
-    Header/         # üst bar, START/RESET vb.
-    Race/           # pist & animasyon
-    RaceTables/     # ProgramTable, ResultsTable
-    Horse/          # at görselleri/numaralar(1-20 liste)
-  core/             # model tanımları ve constantlar (Horse, Race...)
-  stores/           # vuex modülleri (race, schedule, horses)
-  utils/            # yardımcılar (raceMath, generator)
+├─ assets/
+│  ├─ images/         # logo, ikonlar, madalyalar
+│  └─ styles/         # variables & utilities (SCSS)
+├─ components/
+│  ├─ Header/         # üst bar, START/RESET vb.
+│  ├─ Race/           # pist & animasyon
+│  ├─ RaceTables/     # ProgramTable, ResultsTable
+│  └─ Horse/          # at görselleri/numaralar(1-20 liste)
+├─ core/              # model tanımları ve constantlar (Horse, Race...)
+├─ stores/            # vuex modülleri (race, schedule, horses)
+└─ utils/             # yardımcılar (raceMath, generator)
+```      
