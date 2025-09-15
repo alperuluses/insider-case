@@ -44,7 +44,7 @@ import RaceTableWrapper from './components/RaceTables/RaceTableWrapper.vue'
   display: grid;
   grid-template-columns: 350px 1fr 280px;
   gap: 1rem;
-  height: 90%;
+  height: 80vh;
 
 
   //mobilede overflow

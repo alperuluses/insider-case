@@ -141,7 +141,7 @@ onBeforeUnmount(() => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 24%;
+    max-height: 80vh;
     gap: 10px;
     border-right: 4px solid red;
     position: relative;
@@ -171,8 +171,9 @@ onBeforeUnmount(() => {
             position: relative;
             background: rgb(76 175 80);
             border-radius: 0.5rem;
-            height: 60px;
+            height: 100%;
             padding-left: 2rem;
+            max-height: 60px;
 
             .lane-number {
                 position: absolute;
