@@ -58,7 +58,7 @@ function setTab(tab: Tab) {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-height: 25%;
+    max-height: 80vh;
 
     @media (max-width: 480px) {
         max-height: 50%;

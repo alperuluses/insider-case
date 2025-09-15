@@ -34,7 +34,7 @@ const allHorses = computed<Horse[]>(() => store.state.horses.allHorses)
 @use "@/assets/styles/variables" as *;
 
 .horse-list {
-    max-height: 25%;
+    max-height: 80vh;
     background-color: $card-bg;
     color: white;
     border-radius: 10px;
